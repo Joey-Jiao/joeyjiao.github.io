@@ -17,6 +17,10 @@ export default defineConfig({
     rollupConfig: {
       external: ["node:async_hooks"],
     },
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
   },
   vite: {
     plugins: [
