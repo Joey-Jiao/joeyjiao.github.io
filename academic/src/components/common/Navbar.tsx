@@ -1,5 +1,6 @@
-import { For } from "solid-js"
+import { For, Show } from "solid-js"
 import { A } from "@solidjs/router"
+import { Sun, Moon } from "lucide-solid"
 import { isDark, toggleTheme } from "~/lib/theme"
 
 const navLinks = [
@@ -30,7 +31,9 @@ export default function Navbar() {
           onClick={toggleTheme}
           class="text-text-tertiary hover:text-accent transition-colors duration-200"
         >
-          {isDark() ? "Light" : "Dark"}
+          <Show when={isDark()} fallback={<Sun size={16} />}>
+            <Moon size={16} />
+          </Show>
         </button>
       </div>
     </nav>

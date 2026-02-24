@@ -10,8 +10,12 @@ import rehypePrettyCode from "rehype-pretty-code"
 
 export default defineConfig({
   server: {
+    preset: "cloudflare-pages",
     prerender: {
       crawlLinks: true,
+    },
+    rollupConfig: {
+      external: ["node:async_hooks"],
     },
   },
   vite: {
