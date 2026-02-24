@@ -1,0 +1,7 @@
+packages:
+  - academic
+  - personal
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild

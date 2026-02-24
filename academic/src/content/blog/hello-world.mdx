@@ -1,0 +1,56 @@
+---
+title: "Building a Blog with MDX"
+date: "2026-02-23"
+tags: ["meta", "web"]
+excerpt: "A walkthrough of building this blog with MDX, SolidJS, and a modern content pipeline."
+---
+
+This is the inaugural post on my blog. I built this using **MDX** with SolidJS, which lets me mix Markdown with interactive components.
+
+## Code Highlighting
+
+Here's an example of syntax-highlighted code:
+
+```python
+import torch
+import torch.nn as nn
+
+class GNNLayer(nn.Module):
+    def __init__(self, in_dim, out_dim):
+        super().__init__()
+        self.linear = nn.Linear(in_dim, out_dim)
+
+    def forward(self, x, adj):
+        return torch.relu(self.linear(adj @ x))
+```
+
+## Math Formulas
+
+The message-passing framework in GNNs can be expressed as:
+
+$$
+h_v^{(l+1)} = \sigma\left(W^{(l)} \cdot \text{AGG}\left(\{h_u^{(l)} : u \in \mathcal{N}(v)\}\right)\right)
+$$
+
+Where $h_v^{(l)}$ is the representation of node $v$ at layer $l$, and $\mathcal{N}(v)$ denotes the neighborhood of $v$.
+
+## GFM Features
+
+| Feature | Supported |
+|---------|-----------|
+| Tables | Yes |
+| Strikethrough | ~~No~~ Yes |
+| Task Lists | Yes |
+
+- [x] MDX pipeline
+- [x] Code highlighting
+- [x] Math rendering
+- [x] D3 visualizations
+
+## D3 Visualization
+
+A force-directed graph showing the GNN research landscape. Nodes are draggable.
+
+import ForceGraph from '~/components/viz/ForceGraph'
+
+<ForceGraph />

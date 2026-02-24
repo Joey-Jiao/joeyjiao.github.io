@@ -1,0 +1,35 @@
+{
+  "name": "academic",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "preview": "vinxi start"
+  },
+  "dependencies": {
+    "@mdx-js/rollup": "^3.1.1",
+    "@solidjs/router": "^0.15.4",
+    "@solidjs/start": "^1.1.0",
+    "@tailwindcss/vite": "^4.2.0",
+    "d3": "^7.9.0",
+    "katex": "^0.16.32",
+    "rehype-katex": "^7.0.1",
+    "rehype-pretty-code": "^0.14.1",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-mdx-frontmatter": "^5.2.0",
+    "shiki": "^3.22.0",
+    "solid-js": "^1.9.10",
+    "tailwindcss": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^24.10.1",
+    "typescript": "~5.9.3",
+    "vinxi": "^0.5.3",
+    "vite": "^7.3.1"
+  }
+}
