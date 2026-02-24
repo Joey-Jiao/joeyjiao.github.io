@@ -1,6 +1,7 @@
 import { Show } from "solid-js"
 import { Dynamic } from "solid-js/web"
 import { useParams } from "@solidjs/router"
+import { Title, Meta } from "@solidjs/meta"
 import { researchProjects } from "~/data/research"
 import { getResearchContent } from "~/lib/content"
 import { mdxComponents } from "~/lib/mdx"
@@ -23,6 +24,11 @@ export default function ResearchDetail() {
       fallback={<NotFound message="Project not found." backHref="/" backLabel="Back to Home" />}
     >
       <DetailLayout backHref="/" backLabel="Home" title={title()}>
+        <Title>{title()} | Ao Jiao</Title>
+        <Meta name="description" content={project()?.summary || title()} />
+        <Meta property="og:title" content={`${title()} | Ao Jiao`} />
+        <Meta property="og:description" content={project()?.summary || title()} />
+        <Meta property="og:type" content="website" />
         <Show when={mdxContent()}>
           {(m) => (
             <>

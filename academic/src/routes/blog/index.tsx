@@ -1,4 +1,5 @@
 import { For, Show, createSignal, createMemo } from "solid-js"
+import { Title, Meta } from "@solidjs/meta"
 import { getBlogPosts, getAllTags } from "~/lib/content"
 import PostCard from "~/components/blog/PostCard"
 import TagFilter from "~/components/blog/TagFilter"
@@ -16,6 +17,11 @@ export default function Blog() {
 
   return (
     <section class="py-10">
+      <Title>Blog | Ao Jiao</Title>
+      <Meta name="description" content="Blog posts by Ao Jiao" />
+      <Meta property="og:title" content="Blog | Ao Jiao" />
+      <Meta property="og:description" content="Blog posts by Ao Jiao" />
+      <Meta property="og:type" content="website" />
       <h1 class="text-3xl font-bold">Blog</h1>
       <Show when={tags.length > 0}>
         <div class="mt-6">

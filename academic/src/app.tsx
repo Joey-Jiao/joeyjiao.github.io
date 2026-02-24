@@ -1,5 +1,6 @@
 import { Router } from "@solidjs/router"
 import { FileRoutes } from "@solidjs/start/router"
+import { MetaProvider } from "@solidjs/meta"
 import { ErrorBoundary, Suspense } from "solid-js"
 import "~/index.css"
 import Navbar from "~/components/common/Navbar"
@@ -9,6 +10,7 @@ export default function App() {
   return (
     <Router
       root={(props) => (
+        <MetaProvider>
         <div class="mx-auto max-w-4xl px-6 py-8 font-serif text-text-primary min-h-screen leading-relaxed">
           <Navbar />
           <ErrorBoundary fallback={(err) => (
@@ -22,6 +24,7 @@ export default function App() {
           </ErrorBoundary>
           <Footer />
         </div>
+        </MetaProvider>
       )}
     >
       <FileRoutes />
