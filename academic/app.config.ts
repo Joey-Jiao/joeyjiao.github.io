@@ -17,13 +17,6 @@ export default defineConfig({
     rollupConfig: {
       external: ["node:async_hooks"],
     },
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
-      wrangler: {
-        compatibility_flags: ["nodejs_compat_v2"],
-      },
-    },
   },
   vite: {
     plugins: [
